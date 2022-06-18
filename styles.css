@@ -1,0 +1,188 @@
+/*   Reset margin  */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+picture {
+    margin: 0;
+}
+
+/*   Make form elements easier to work with  */
+input,
+textarea,
+button,
+select {
+    font-family: inherit;
+}
+
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+    margin: 0;
+    background-image: url(./dist/images/bg-intro-mobile.png);
+    background-color: hsl(0, 100%, 74%);
+    background-repeat: no-repeat;
+    background-position: center 0;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    /* overflow: visible; */
+}
+
+main {
+    display: grid;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.heading--section {
+    flex: 50%;
+    color: hsl(0, 0%, 100%);
+    text-align: center;
+    font-size: 14px;
+    /* margin-top: 50px; */
+}
+
+.heading--text {
+    color: hsl(247, 24%, 93%);
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.header {
+    background-color: hsl(248, 32%, 49%);
+    box-shadow: 0 8px 2px rgb(0 0 0 / 10%);
+    color: hsl(0, 0%, 100%);
+    width: auto;
+    font-size: 12px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.header span {
+    color: hsl(246, 25%, 77%);
+}
+
+.signup {
+    flex: 50%;
+}
+
+.form {
+    margin-top: 30px;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0 10px 1px rgb(0 0 0 / 10%);
+    border-radius: 8px;
+    padding: 30px 40px;
+}
+
+.form-control {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.form-control input {
+    border: 2px solid hsl(247, 24%, 93%);
+    border-radius: 5px;
+    display: block;
+    padding: 10px;
+    width: 94%;
+    font-size: 14px;
+}
+
+.form-control.error input {
+    border-color: hsl(0, 100%, 74%);
+}
+
+.form-control i {
+    visibility: hidden;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+}
+
+.form-control.error i {
+    visibility: visible;
+    color: hsl(0, 100%, 74%);
+}
+
+.form-control small {
+    visibility: hidden;
+    position: absolute;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 12px;
+    bottom: 0;
+    right: 0;
+}
+
+.form-control.error small {
+    visibility: visible;
+    color: hsl(0, 100%, 74%);
+}
+
+.btn {
+    background-color: hsl(154, 59%, 51%);
+    border: none;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    color: hsl(0, 0%, 100%);
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.form--footer {
+    text-align: center;
+    font-size: 12px;
+    color: hsl(246, 25%, 77%);
+    padding: 10px 40px;
+}
+
+.form--footer a{
+    text-decoration: none;
+    color: hsl(0, 100%, 74%);
+    font-weight: 600;
+}
+
+@media screen and (min-width: 600px) {
+    body {
+        background-image: url(./dist/images/bg-intro-desktop.png);
+        /* overflow: hidden; */
+    }
+
+    main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 20px 90px;
+        /* margin: 0; */
+    }
+
+    input {
+        width: 95.5% !important;
+    }
+    
+    .heading--section {
+        /* padding-top: 80px; */
+        text-align: left;
+    }
+
+    .heading {
+        font-size: 42px;
+        line-height: 1.2;
+        margin-bottom: 10px;
+    }
+
+    .heading--text {
+        padding-right: 90px;
+    }
+}

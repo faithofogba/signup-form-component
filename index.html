@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/4ba198f83f.js" crossorigin="anonymous"></script>
+    <script defer src="./script.js"></script>
+</head>
+
+<body>
+    <header>
+    </header>
+    <main>
+        <section class="heading--section">
+            <h1 class="heading">Learn to code by <br> watching others</h1>
+            <p class="heading--text">See how experienced developers solve problems in real-time. Watching scripted
+                tutorials is great, but
+                understanding how developers think is invaluable.</p>
+        </section>
+        <div class="signup">
+            <div class="header">
+                Try it free 7 days <span>then $20/mo. thereafter</span>
+            </div>
+            <form class="form" id="form">
+                <div class="form-control">
+                    <input id="fname" aria-labelledby="first_name" type="text" placeholder="First Name">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <small id="error">First Name cannot be empty</small>
+                </div>
+                <div class="form-control">
+                    <input id="lname" aria-labelledby="last_name" type="text" placeholder="Last Name">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <small id="error">Last Name cannot be empty</small>
+                </div>
+                <div class="form-control">
+                    <input id="email" aria-labelledby="email" type="email" placeholder="Email Address">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <small id="error">Looks like this is not an email</small>
+                </div>
+                <div class="form-control">
+                    <input id="pass" aria-divledby="password" type="password" placeholder="Password">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <small id="error">Password cannot be empty</small>
+                </div>
+                <button class="btn" type="submit">Claim your free trial</button>
+                <p class="form--footer">By clicking the button, you are agreeing to our <a href="#">Terms and
+                        Services</a></p>
+            </form>
+        </div>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+
+</html>

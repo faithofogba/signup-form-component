@@ -1,47 +1,22 @@
-const fname = document.getElementById('fname')
-const lname = document.getElementById('lname')
-const email = document.getElementById('email')
-const password = document.getElementById('pass')
-const errorElement = document.getElementById('error')
+function handleSubmit(event) {
+    event.preventDefault();
 
-const form = document.getElementById('form')
+    validateInput('fname', "First Name cannot be empty")
+    validateInput('lname', "Last Name cannot be empty")
+    validateInput('email', "Looks like this is not an email")
+    validateInput('pass', "Password cannot be empty")
+}
 
-console.log("I am here")
+function validateInput(inputId, message) {
+    const inputField = document.getElementById(inputId);
+    const inputValue = inputField.value.trim();
 
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
+    console.log("submitted", inputValue)
 
-    checkInputs();
-})
-
-function checkInputs() {
-    const fnameValue = fname.value.trim();
-    const lnameValue = lname.value.trim();
-    const emailValue = email.value.trim();
-    const passwordValue = password.value.trim();
-
-    if(fnameValue === "") {
-        setErrorFor(fname, "First Name cannot be empty")
+    if(inputValue === "") {
+        setErrorFor(inputField, message)
     } else {
-        setSuccessFor(fname)
-    }
-
-    if(lnameValue === "") {
-        setErrorFor(lname, "Last Name cannot be empty")
-    } else {
-        setSuccessFor(lname)
-    }
-
-    if(emailValue === "") {
-        setErrorFor(email, "Looks like this is not an email")
-    } else {
-        setSuccessFor(email)
-    }
-
-    if(passwordValue === "") {
-        setErrorFor(password, "Password cannot be empty")
-    } else {
-        setSuccessFor(password)
+        setSuccessFor(inputField)
     }
 }
 
